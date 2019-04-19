@@ -77,11 +77,11 @@ class ToDoDB:
             return
 
     def createTodoitemsTable(self):
-        self.cursor.execute("CREATE TABLE IF NOT EXISTS todoitems (id SERIAL PRIMARY KEY, item TEXT")
+        self.cursor.execute("CREATE TABLE IF NOT EXISTS todoitems (id SERIAL PRIMARY KEY, item TEXT)")
         self.connection.commit()
 
     def createUsersTable(self):
-        self.cursor.execute("CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY, fname VARCHAR(255), lname VARCHAR(255), email VARCHAR(255), password TEXT")
+        self.cursor.execute("CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY, fname VARCHAR(255), lname VARCHAR(255), email VARCHAR(255), password TEXT)")
         self.connection.commit()
 
 
