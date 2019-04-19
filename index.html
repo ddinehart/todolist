@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>Hotel To Do List </title>
+    </head>
+    <body>
+      <div id="login-page">
+          <!-- <form id="form_id" method="post" name="myform">
+              <label>Email :</label>
+              <input type="text" id="email"/>
+              <label>Password :</label>
+              <input type="password" id="password"/>
+              <button type="button"  id="submit-login"></button>
+            </form> -->
+          <h1>Login</h1>
+          <p>Email:</p>
+          <input type="text" id="email" >
+          <p>Password:</p>
+          <input type="text" id="password" >
+        <div>
+          <button id="submit-login">Login</button>     
+          <button id="register">Register</button>
+        </div>
+      </div>
+      <div id="register-page">
+          <!-- <form id="form_id" method="post" name="myform">
+              <label>Email :</label>
+              <input type="text" id="email"/>
+              <label>Password :</label>
+              <input type="password" id="password"/>
+              <button type="button"  id="submit-login"></button>
+            </form> -->
+          <h1>Register</h1>
+          <p>First Name:</p>
+          <input type="text" id="fname">
+          <p>Last Name</p>
+          <input type="text" id="lname">
+          <p>Email:</p>
+          <input type="text" id="emailr">
+          <p>Password:</p>
+          <input type="text" id="passwordr">
+        <div>
+          <button id="submit-register">Register</button>
+        </div>
+      </div>
+      <div id="c">
+        <h1>Hotel To Do List</h1>
+        <ol id="suggestions">
+
+        </ol>
+        <div>
+            <p>Add new item:</p>
+            <input type="text" id="item">
+        </div>
+        <button id="the-button">Save</button>
+        <ul id="the-list">
+
+        </ul>
+        <div id="editItem">
+          <h2>Edit item <input type="text" id="editInput"><button id="update" onclick="myFunction()"></input></h2>
+        </div>
+        <script src="app.js"></script>
+      </div>
+    </body>
+</html>
