@@ -7,7 +7,7 @@ var todoid = null;
 
 var createToDoList = function (item) {
   var data = "item" + encodeURIComponent(item);
-  fetch("http://localhost:8080/todoitems", {
+  fetch("https://fathomless-forest-99597.herokuapp.com/todoitems", {
     method: 'POST',
     body: data,
     credentials: 'include',
@@ -24,7 +24,7 @@ var createToDoList = function (item) {
 
 var getItem = function (id) {
   console.log('getitem', id)
-  fetch(`http://localhost:8080/todoitems/${id}`, {
+  fetch(`https://fathomless-forest-99597.herokuapp.com/todoitems/${id}`, {
     method: 'GET',
     credentials: 'include',
     headers: {
@@ -59,7 +59,7 @@ var createToDoList = function () {
   
   console.log('item')
 
-  fetch("http://localhost:8080/todoitems", {
+  fetch("https://fathomless-forest-99597.herokuapp.com/todoitems", {
     method: 'POST',
     body: data,
     credentials: 'include',
@@ -79,7 +79,7 @@ var updateTodoitem = function (id) {
   // console.log('tesitng', item)
   var data = "item=" + encodeURIComponent(item);
 
-  fetch(`http://localhost:8080/todoitems/${id}`, {
+  fetch(`https://fathomless-forest-99597.herokuapp.com/todoitems/${id}`, {
       method: 'PUT',
       body: data,
       credentials: 'include',
@@ -117,7 +117,7 @@ function hideContent() {
 hideDiv();
 
 var deleteTodoitem = function (id) {
-  fetch(`http://localhost:8080/todoitems/${id}`, {
+  fetch(`https://fathomless-forest-99597.herokuapp.com/todoitems/${id}`, {
       method: 'DELETE',
       credentials: 'include',
   }).then(function (response) {
@@ -146,7 +146,7 @@ var checkUsernameExists = function () {
    var data = "email=" + encodeURIComponent(eInput.value);
    data += "&password=" + encodeURIComponent(passInput.value);  
    console.log('mydata: ', data)
-   fetch("http://localhost:8080/sessions", {
+   fetch("https://fathomless-forest-99597.herokuapp.com/sessions", {
      method: 'POST',
      body: data,
      credentials: 'include',
@@ -209,7 +209,7 @@ var loginButton = document.querySelector("#submit-login");
     data += "&email=" + encodeURIComponent(emailInput.value);
     data += "&password=" + encodeURIComponent(passwordInput.value);  
     console.log('mydata: ', data)
-    fetch("http://localhost:8080/users", {
+    fetch("https://fathomless-forest-99597.herokuapp.com/users", {
       method: 'POST',
       body: data,
       credentials: 'include',
@@ -282,7 +282,7 @@ function hideLogin() {
 };
 
   var getToDo = function () {
-    fetch("http://localhost:8080/todoitems", {credentials: 'include'}).then(function (response) {
+    fetch("https://fathomless-forest-99597.herokuapp.com/todoitems", {credentials: 'include'}).then(function (response) {
 
     if(response.status == 401) {
       console.log("401 was given.")
